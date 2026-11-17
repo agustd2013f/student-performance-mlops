@@ -27,9 +27,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install fastapi uvicorn pandas==2.2.3 scikit-learn==1.9.0 joblib jinja2 python-multipart pytest httpx
 
-      - name: Ejecutar pruebas unitarias con pytest
+     - name: Ejecutar pruebas unitarias con pytest
         run: |
-          pytest -v
+          python -m pytest -v
 
   build-and-push:
     needs: test
