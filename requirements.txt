@@ -1,0 +1,12 @@
+pandas
+scikit-learn
+joblib
+mlflow
+dvc
+fastapi
+uvicorn
+jinja2
+python-multipart
+pytest
+httpx
+evidently>=0.7.0,<0.8.0
