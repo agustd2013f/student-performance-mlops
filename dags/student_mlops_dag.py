@@ -26,7 +26,7 @@ with DAG(
 
     train_and_register = BashOperator(
         task_id="train_mlflow_champion",
-        bash_command="cd /opt/airflow/project && python src/train_mlflow.py",
+        bash_command="mkdir -p /tmp/mlflow_run && ln -sfn /opt/airflow/project/src /opt/airflow/project/data /opt/airflow/project/models /opt/airflow/project/reports /tmp/mlflow_run/ && cd /tmp/mlflow_run && python src/train_mlflow.py",
     )
 
     monitor_drift = BashOperator(
